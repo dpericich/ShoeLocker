@@ -21,3 +21,28 @@ span {
   .product-item {
   }
 }
+
+.product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  &__image {
+    width: 45vw;
+    height: 40vh;
+    background-color: goldenrod;
+  }
+
+  &__information {
+    width: 45vw;
+  }
+
+  &__title {
+  }
+
+  &__price {
+  }
+
+  &__description {
+  }
+}
