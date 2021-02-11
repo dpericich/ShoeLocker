@@ -19,3 +19,28 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
+html {
+  font-size: 62.5%;
+}
+
+nav {
+  background-color: #000000;
+  height: 15vh;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 5rem;
+}
+
+.nav__link,
+.nav__link:visited,
+.nav__link:link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: goldenrod;
+}

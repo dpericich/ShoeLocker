@@ -11,6 +11,11 @@
   </head>
 
   <body>
+    <nav>
+      <%= link_to "Home", :root, class: "nav__link" %>
+      <img src="<%= image_path("banner.png") %>" />
+      <%= link_to "Add Shoe", new_product_path, class: "nav__link" %>
+    </nav>
     <%= yield %>
   </body>
 </html>
