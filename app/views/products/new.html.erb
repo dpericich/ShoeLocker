@@ -1,5 +1,5 @@
 <h3>Add a product</h3>
-<%= form_for @product do |form| %>
+<%= form_with model: @product do |form| %>
     <p>
         <%= form.label :title %><br>
         <%= form.text_field :title %>
