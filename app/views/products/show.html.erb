@@ -11,6 +11,7 @@
 </section>
 
 <div class="action__container">
-    <div class="btn btn__edit">Edit</div>
+    <%= link_to "Edit", edit_product_path, class: "btn btn__edit" %>
+    <%# <div class="btn btn__edit">Edit</div> %>
     <%= link_to "Destroy", product_path(@product), method: :delete, data: {confirm: "Are you sure?" }, class: "btn btn__delete" %>
 </div>
