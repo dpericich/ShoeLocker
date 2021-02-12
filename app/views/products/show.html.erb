@@ -15,3 +15,39 @@
     <%# <div class="btn btn__edit">Edit</div> %>
     <%= link_to "Destroy", product_path(@product), method: :delete, data: {confirm: "Are you sure?" }, class: "btn btn__delete" %>
 </div>
+
+<h2>Leave a Review</h2>
+<%= form_with model: [ @product, @product.ratings.build] do |form| %>
+    <p>
+        <%= form.label :customer %><br>
+        <%= form.text_field :customer%>
+        <% @product.errors.full_messages_for(:customer).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </p>
+
+    <p>
+        <%= form.label :rating %><br>
+        <%= form.number_field :rating %>
+        <% @product.errors.full_messages_for(:rating).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </p>
+
+    <p>
+        <%= form.label :review %><br>
+        <%= form.text_area :review %>
+        <% @product.errors.full_messages_for(:review).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </p>
+
+    <%= form.submit "Post Review" %>
+<% end %>
+
+
+<% @product.ratings.each do |rating| %>
+    <p><%= rating.customer %></p>
+    <p><%= rating.rating %></p>
+    <p><%= rating.review %><p>
+<% end %>
