@@ -3,6 +3,14 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
+  def mens_shoes
+    @products = Product.mens_shoes
+  end
+
+  def female_shoes
+    @products = Product.females_shoes 
+  end
+
   def show
     @product = Product.find(params[:id])
   end 

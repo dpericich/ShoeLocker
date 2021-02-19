@@ -1,0 +1,9 @@
+<div class="product-container">
+    <% @products.each do |product| %>
+        <div class="product-item">
+            <h2><%= link_to product.title, product %></h2>
+            <span><%= product.gender %> | <%= product.price %></span>
+            <p><%= product.description %></p>
+        </div>
+    <% end %>
+</div>
